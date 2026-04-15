@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Premium | The Future of Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#6366f1',
+                            secondary: '#a855f7',
+                            accent: '#ec4899',
+                            dark: '#0f172a',
+                        }
+                    },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-mesh { 
+            background: 
+                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                #0f172a;
+        }
+        .hero-title { font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9; }
+    </style>
+</head>
+<body class="bg-mesh text-white font-sans overflow-x-hidden selection:bg-brand-primary">
+
+    <!-- Cinematic Navigation -->
+    <nav class="fixed top-0 w-full z-50 py-8 px-6 transition-all duration-500" id="nav">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center rotate-45 group-hover:rotate-90 transition-transform duration-500">
+                    <span class="text-white font-black -rotate-45 group-hover:-rotate-90 transition-transform">X</span>
+                </div>
+                <span class="text-2xl font-black tracking-tighter">XYZ <span class="text-brand-primary">PREMIUM</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-xs font-black uppercase tracking-[0.2em] text-gray-400">
+                <a href="shop.html" class="hover:text-white transition-colors">Collection</a>
+                <a href="#philosophy" class="hover:text-white transition-colors">Philosophy</a>
+                <a href="#featured" class="hover:text-white transition-colors">Trends</a>
+            </div>
+            <a href="shop.html" class="px-8 py-3 bg-white text-brand-dark rounded-full font-black text-xs hover:scale-105 transition-transform">
+                ENTER SHOP
+            </a>
+        </div>
+    </nav>
+
+    <!-- Immersive Hero -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-primary/20 blur-[120px] rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-brand-accent/20 blur-[120px] rounded-full animate-pulse-slow" style="animation-delay: 2s"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 text-center space-y-12">
+            <p class="text-brand-accent font-black tracking-[0.5em] uppercase text-sm animate-fade-in opacity-0" style="animation-fill-mode: forwards">EST. 2026 / FUTURE READY</p>
+            <h1 class="hero-title font-black tracking-tighter animate-slide-up opacity-0" style="animation-fill-mode: forwards; animation-delay: 0.2s">
+                EXPERIENCE <br> <span class="text-gradient">THE UNKNOWN.</span>
+            </h1>
+            <p class="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed font-light animate-slide-up opacity-0" style="animation-fill-mode: forwards; animation-delay: 0.4s">
+                Beyond products. Beyond trends. XYZ Premium is a curation of futuristic aesthetics and uncompromising engineering for the modern pioneer.
+            </p>
+            <div class="flex items-center justify-center gap-6 pt-8 animate-slide-up opacity-0" style="animation-fill-mode: forwards; animation-delay: 0.6s">
+                <a href="shop.html" class="group relative px-12 py-5 bg-brand-primary text-white font-black rounded-2xl shadow-2xl shadow-brand-primary/40 overflow-hidden">
+                    <span class="relative z-10">START EXPLORING</span>
+                    <div class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+                </a>
+                <button class="w-20 h-20 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <i class="fas fa-play text-brand-primary"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Particles Concept -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-brand-secondary/20 blur-[80px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1000&fit=crop" class="relative z-10 rounded-[3rem] shadow-2xl animate-float" alt="Tech">
+                    <div class="absolute -bottom-10 -right-10 glass p-8 rounded-[2.5rem] space-y-4">
+                        <p class="text-3xl font-black">4.9/5</p>
+                        <p class="text-[10px] text-gray-500 uppercase font-black tracking-widest leading-none">Global Innovation Award</p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <span class="text-brand-secondary font-black tracking-widest uppercase text-xs">Our Meta-Reality</span>
+                    <h2 class="text-6xl font-black leading-tight">Design Focused. <br><span class="text-gradient">Performance Driven.</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed font-light">
+                        We don't just build gear; we build extensions of your ambition. Every line, every stitch, and every material is chosen based on a 20-year vision of where style is headed.
+                    </p>
+                    <div class="grid grid-cols-2 gap-10 pt-10">
+                        <div class="space-y-3">
+                            <h4 class="text-3xl font-black text-white">12K+</h4>
+                            <p class="text-xs text-gray-500 uppercase font-black">Innovation Patents</p>
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-3xl font-black text-white">500K+</h4>
+                            <p class="text-xs text-gray-500 uppercase font-black">Happy Pioneers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Teases -->
+    <section id="featured" class="py-32 px-6 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto space-y-20">
+            <div class="flex justify-between items-end">
+                <div class="space-y-4">
+                    <span class="text-brand-accent font-black tracking-widest uppercase text-xs">Current Drops</span>
+                    <h2 class="text-6xl font-black">Featured <br> <span class="text-gradient">Innovations.</span></h2>
+                </div>
+                <a href="shop.html" class="text-xs font-black uppercase tracking-widest border-b-2 border-brand-primary pb-2 text-gray-400 hover:text-white transition-colors">View All Gallery</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Teaser 1 -->
+                <div class="group relative h-[500px] rounded-[3rem] overflow-hidden glass">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Shoes">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-10 left-10 space-y-2">
+                        <span class="text-xs font-black text-brand-primary uppercase">Footwear</span>
+                        <h3 class="text-3xl font-black">Pro-X Series</h3>
+                        <a href="shop.html" class="inline-block mt-4 text-xs font-black uppercase tracking-widest group-hover:text-brand-primary transition-colors">Explore Step <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-2"></i></a>
+                    </div>
+                </div>
+                <!-- Teaser 2 -->
+                <div class="group relative h-[600px] lg:-mt-10 rounded-[3rem] overflow-hidden glass">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Watch">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-10 left-10 space-y-2">
+                        <span class="text-xs font-black text-brand-secondary uppercase">Accessories</span>
+                        <h3 class="text-3xl font-black">Nomad Time</h3>
+                        <a href="shop.html" class="inline-block mt-4 text-xs font-black uppercase tracking-widest group-hover:text-brand-secondary transition-colors">Explore Time <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-2"></i></a>
+                    </div>
+                </div>
+                <!-- Teaser 3 -->
+                <div class="group relative h-[500px] rounded-[3rem] overflow-hidden glass">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Audio">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-10 left-10 space-y-2">
+                        <span class="text-xs font-black text-brand-accent uppercase">Acoustics</span>
+                        <h3 class="text-3xl font-black">H1 Audio Kit</h3>
+                        <a href="shop.html" class="inline-block mt-4 text-xs font-black uppercase tracking-widest group-hover:text-brand-accent transition-colors">Explore Sound <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Footer -->
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto glass p-20 rounded-[4rem] text-center space-y-10 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-primary/10 to-brand-accent/10"></div>
+            <div class="relative z-10 space-y-6">
+                <h2 class="text-7xl font-black leading-none">Ready to <span class="text-gradient">Upgrade</span> Life?</h2>
+                <p class="text-gray-400 text-xl max-w-xl mx-auto font-light">Join the global elite using XYZ Premium gear. Limited stock available monthly.</p>
+                <div class="pt-10">
+                    <a href="shop.html" class="inline-block px-16 py-6 bg-white text-brand-dark font-black rounded-3xl hover:scale-105 transition-transform shadow-2xl">
+                        JOIN THE REVOLUTION
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="mt-32 border-t border-white/5 pt-16 grid md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="space-y-6">
+                <a href="#" class="text-2xl font-black tracking-tighter">XYZ <span class="text-brand-primary">PREMIUM</span></a>
+                <p class="text-gray-500 text-sm leading-relaxed">The intersection of futuristic tech and timeless style. Designed in Neo City.</p>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-[10px] font-black uppercase tracking-[0.2em] text-white">Discovery</h5>
+                <ul class="text-gray-500 text-sm space-y-2">
+                    <li><a href="shop.html" class="hover:text-brand-primary transition-colors">Catalog</a></li>
+                    <li><a href="#" class="hover:text-brand-primary transition-colors">Limited Drops</a></li>
+                    <li><a href="#" class="hover:text-brand-primary transition-colors">Archived Kits</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-[10px] font-black uppercase tracking-[0.2em] text-white">Pioneers</h5>
+                <ul class="text-gray-500 text-sm space-y-2">
+                    <li><a href="#" class="hover:text-brand-primary transition-colors">Brand Meta</a></li>
+                    <li><a href="#" class="hover:text-brand-primary transition-colors">Founder Direct</a></li>
+                    <li><a href="#" class="hover:text-brand-primary transition-colors">Neo-Labs</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h5 class="text-[10px] font-black uppercase tracking-[0.2em] text-white">Direct Feed</h5>
+                <div class="flex justify-center md:justify-start gap-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-xl transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xl transition-colors"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xl transition-colors"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+        <p class="text-center text-[10px] text-gray-700 mt-20 uppercase tracking-[0.5em] font-black">© 2026 XYZ PREMIUM CORPORATION / ALL RIGHTS RESERVED</p>
+    </section>
+
+    <script>
+        // Cinematic scroll effects
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'py-6');
+                nav.classList.remove('py-8');
+            } else {
+                nav.classList.remove('glass', 'py-6');
+                nav.classList.add('py-8');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.replace('opacity-0', 'animate-slide-up');
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('h1, h2, h3, p, .group, .hero-title').forEach(el => {
+            if(!el.classList.contains('animate-slide-up')) {
+                // el.classList.add('opacity-0');
+                // observer.observe(el);
+            }
+        });
+        
+        // Manual simple reveal since I used inline animation classes for hero
+        setTimeout(() => {
+            document.querySelectorAll('.animate-slide-up, .animate-fade-in').forEach(el => {
+                el.classList.remove('opacity-0');
+            });
+        }, 100);
+    </script>
+</body>
+</html>

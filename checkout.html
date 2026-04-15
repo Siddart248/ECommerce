@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | XYZ Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#6366f1',
+                            secondary: '#a855f7',
+                            accent: '#ec4899',
+                            dark: '#0f172a',
+                        }
+                    },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-gradient { background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        input, select { background: rgba(255, 255, 255, 0.05) !important; color: white !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; }
+        input:focus, select:focus { border-color: #6366f1 !important; outline: none !important; box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2); }
+    </style>
+</head>
+<body class="bg-brand-dark text-white font-sans">
+
+    <nav class="glass py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="shop.html" class="flex items-center gap-2 group">
+                <i class="fas fa-arrow-left text-brand-primary group-hover:-translate-x-1 transition-transform"></i>
+                <span class="font-black tracking-tight text-xs uppercase">Return to Shop</span>
+            </a>
+            <a href="index.html" class="flex items-center gap-2 group">
+                <span class="font-black tracking-tighter text-xl uppercase">XYZ <span class="text-brand-primary">PREMIUM</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-2 text-xs font-black uppercase text-gray-500 tracking-widest">
+                <span class="text-brand-primary">Shipping</span>
+                <i class="fas fa-chevron-right text-[8px] mx-2 opacity-30"></i>
+                <span>Payment</span>
+                <i class="fas fa-chevron-right text-[8px] mx-2 opacity-30"></i>
+                <span>Review</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid lg:grid-cols-5 gap-16">
+            
+            <!-- Checkout Form -->
+            <div class="lg:col-span-3 space-y-12">
+                <section class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center font-black">1</div>
+                        <h2 class="text-2xl font-black">Shipping Address</h2>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase text-gray-500 ml-1">First Name</label>
+                            <input type="text" placeholder="John" class="w-full rounded-2xl px-6 py-4">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase text-gray-500 ml-1">Last Name</label>
+                            <input type="text" placeholder="Doe" class="w-full rounded-2xl px-6 py-4">
+                        </div>
+                        <div class="sm:col-span-2 space-y-2">
+                            <label class="text-[10px] font-black uppercase text-gray-500 ml-1">Street Address</label>
+                            <input type="text" placeholder="123 Premium Lane" class="w-full rounded-2xl px-6 py-4">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase text-gray-500 ml-1">City</label>
+                            <input type="text" placeholder="Neo City" class="w-full rounded-2xl px-6 py-4">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase text-gray-500 ml-1">Country</label>
+                            <select class="w-full rounded-2xl px-6 py-4 appearance-none">
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>European Union</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="space-y-8 pt-12 border-t border-white/5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-secondary rounded-xl flex items-center justify-center font-black">2</div>
+                        <h2 class="text-2xl font-black">Payment Method</h2>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <label class="glass p-6 rounded-2xl border-2 border-brand-primary cursor-pointer flex justify-between items-center group">
+                            <div class="flex items-center gap-4">
+                                <i class="far fa-credit-card text-2xl text-brand-primary"></i>
+                                <span class="font-black text-sm">Credit / Debit Card</span>
+                            </div>
+                            <div class="w-5 h-5 rounded-full border-4 border-brand-primary flex items-center justify-center">
+                                <div class="w-2 h-2 rounded-full bg-brand-primary"></div>
+                            </div>
+                        </label>
+                        <label class="glass p-6 rounded-2xl border-2 border-transparent hover:border-white/10 cursor-pointer flex justify-between items-center group transition-all">
+                            <div class="flex items-center gap-4">
+                                <i class="fab fa-apple-pay text-2xl opacity-40 group-hover:opacity-100"></i>
+                                <span class="font-black text-sm text-gray-400 group-hover:text-white">Apple Pay</span>
+                            </div>
+                            <div class="w-5 h-5 rounded-full border-2 border-white/10"></div>
+                        </label>
+                    </div>
+                    <div class="glass p-8 rounded-[2.5rem] space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase text-gray-500 ml-1">Card Number</label>
+                            <div class="relative">
+                                <input type="text" placeholder="•••• •••• •••• ••••" class="w-full rounded-2xl px-6 py-4 tracking-[0.2em]">
+                                <i class="fab fa-cc-visa absolute right-6 top-1/2 -translate-y-1/2 text-2xl text-gray-600"></i>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase text-gray-500 ml-1">Expiry Date</label>
+                                <input type="text" placeholder="MM / YY" class="w-full rounded-2xl px-6 py-4">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-black uppercase text-gray-500 ml-1">CVC</label>
+                                <input type="text" placeholder="•••" class="w-full rounded-2xl px-6 py-4">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-2">
+                <div class="glass p-10 rounded-[3rem] space-y-10 sticky top-32">
+                    <h3 class="text-2xl font-black">Order Summary</h3>
+                    
+                    <div id="checkout-items" class="space-y-6 max-h-[400px] overflow-y-auto custom-scrollbar">
+                        <!-- Items dynamically injected -->
+                    </div>
+
+                    <div class="space-y-4 pt-8 border-t border-white/5">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500 font-bold">Subtotal</span>
+                            <span id="summary-subtotal" class="font-black text-white">$0.00</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500 font-bold">Shipping</span>
+                            <span class="text-brand-primary font-black uppercase tracking-widest text-[10px]">Free</span>
+                        </div>
+                        <div class="flex justify-between text-xl pt-4">
+                            <span class="font-black">Total</span>
+                            <span id="summary-total" class="font-black text-gradient">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button id="complete-order" class="w-full py-6 bg-brand-primary text-white font-black rounded-3xl hover:bg-indigo-700 hover:scale-[1.02] transition-all shadow-2xl shadow-brand-primary/30 flex items-center justify-center gap-3">
+                        PLACE ORDER
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    
+                    <div class="flex items-center justify-center gap-4 text-[10px] text-gray-600 font-black uppercase tracking-widest">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure SSL Encrypted</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="success-overlay" class="fixed inset-0 bg-brand-dark z-[100] hidden items-center justify-center text-center p-4">
+        <div class="space-y-10 max-w-md animate-slide-up">
+            <div class="w-24 h-24 bg-brand-primary rounded-full mx-auto flex items-center justify-center shadow-2xl shadow-brand-primary/50">
+                <i class="fas fa-check text-4xl text-white"></i>
+            </div>
+            <div class="space-y-4">
+                <h1 class="text-5xl font-black">Order Success!</h1>
+                <p class="text-gray-400 leading-relaxed font-light">Your premium selection is being prepared. Check your email for delivery details.</p>
+            </div>
+            <a href="index.html" class="inline-block px-12 py-5 bg-white text-brand-dark font-black rounded-full hover:scale-105 transition-transform shadow-2xl">
+                RETURN TO GALLERY
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('xyz_cart')) || [];
+        
+        const renderSummary = () => {
+            const container = document.getElementById('checkout-items');
+            const subtotalEl = document.getElementById('summary-subtotal');
+            const totalEl = document.getElementById('summary-total');
+            
+            if (!cart.length) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="flex items-center gap-4 animate-fade-in">
+                    <div class="w-20 h-20 rounded-2xl glass shrink-0 overflow-hidden">
+                        <img src="${item.img}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">${item.title}</h4>
+                        <p class="text-xs text-gray-600 font-bold group-hover:text-brand-primary mt-1">QTY: ${item.qty}</p>
+                    </div>
+                    <span class="font-black text-sm">$${(item.price * item.qty).toFixed(2)}</span>
+                </div>
+            `).join('');
+
+            const total = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+            subtotalEl.textContent = `$${total.toFixed(2)}`;
+            totalEl.textContent = `$${total.toFixed(2)}`;
+        };
+
+        const completeOrder = () => {
+            document.getElementById('success-overlay').classList.replace('hidden', 'flex');
+            localStorage.removeItem('xyz_cart');
+        };
+
+        document.getElementById('complete-order').addEventListener('click', completeOrder);
+        
+        // Init
+        renderSummary();
+    </script>
+</body>
+</html>
